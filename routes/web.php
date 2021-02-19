@@ -19,4 +19,6 @@ Route::group(['prefix' => 'products'], function () {
 
     Route::get("{categorySlug}", [\App\Http\Controllers\ProductController::class, "index"])->name('product-list');
 
+    Route::get("{categorySlug}/{productId}", [\App\Http\Controllers\ProductController::class, "show"])->name('product-page');
+
 });
