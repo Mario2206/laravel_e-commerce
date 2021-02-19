@@ -42,7 +42,7 @@
                                                  {{ $categories[$i]->name }}
                                             </h2>
                                             <div class="btn-box">
-                                                <a href="" class="btn-1">
+                                                <a href="{{ route('product-list', ['categorySlug' => $categories[$i]->slug])  }}" class="btn-1">
                                                     Voir les produits
                                                 </a>
 

@@ -197,6 +197,17 @@ a:focus {
   width: 30px;
   height: 30px;
 }
+.custom_nav-container::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 30%;
+    background-color: #24d278;
+    height: 100%;
+    top: 0;
+    right: -5vw;
+    z-index: -1;
+}
 
 .lg_toggl-btn {
   background-color: transparent;

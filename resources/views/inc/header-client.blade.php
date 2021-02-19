@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="" />
+                    <img src="{{asset("images/logo.png")}}" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,24 +13,24 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  ">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html"> About</a>
+                            <a class="nav-link" href="#"> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop </a>
+                            <a class="nav-link" href="#">Shop </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="furniture.html"> Furniture </a>
+                            <a class="nav-link" href="#"> Furniture </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact us</a>
+                            <a class="nav-link" href="#">Contact us</a>
                         </li>
                     </ul>
                     <div class="user_option">
                         <a href="">
-                            <img src="images/user.png" alt="">
+                            <img src="{{asset("images/user.png")}}" alt="">
                             <span>
                   Login
                 </span>

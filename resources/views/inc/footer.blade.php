@@ -14,7 +14,7 @@
                     </h5>
                     <div>
                         <div class="img-box">
-                            <img src="images/location-white.png" width="18px" alt="">
+                            <img src="{{asset("images/location-white.png")}}" width="18px" alt="">
                         </div>
                         <p>
                             Address
@@ -22,7 +22,7 @@
                     </div>
                     <div>
                         <div class="img-box">
-                            <img src="images/telephone-white.png" width="12px" alt="">
+                            <img src="{{asset("images/telephone-white.png")}}" width="12px" alt="">
                         </div>
                         <p>
                             +01 1234567890
@@ -30,7 +30,7 @@
                     </div>
                     <div>
                         <div class="img-box">
-                            <img src="images/envelope-white.png" width="18px" alt="">
+                            <img src="{{asset("images/envelope-white.png")}}" width="18px" alt="">
                         </div>
                         <p>
                             demo@gmail.com
@@ -58,12 +58,12 @@
                         <div>
                             <a href="">
                                 <div class="insta-box b-1">
-                                    <img src="images/i-1.jpg" alt="">
+                                    <img src="{{asset("images/i-1.jpg")}}" alt="">
                                 </div>
                             </a>
                             <a href="">
                                 <div class="insta-box b-2">
-                                    <img src="images/i-2.jpg" alt="">
+                                    <img src="{{asset("images/i-2.jpg")}}" alt="">
                                 </div>
                             </a>
                         </div>
@@ -71,24 +71,24 @@
                         <div>
                             <a href="">
                                 <div class="insta-box b-3">
-                                    <img src="images/i-3.jpg" alt="">
+                                    <img src="{{asset("images/i-3.jpg")}}" alt="">
                                 </div>
                             </a>
                             <a href="">
                                 <div class="insta-box b-4">
-                                    <img src="images/i-4.jpg" alt="">
+                                    <img src="{{asset("images/i-4.jpg")}}" alt="">
                                 </div>
                             </a>
                         </div>
                         <div>
                             <a href="">
                                 <div class="insta-box b-3">
-                                    <img src="images/i-5.jpg" alt="">
+                                    <img src="{{asset("images/i-5.jpg")}}" alt="">
                                 </div>
                             </a>
                             <a href="">
                                 <div class="insta-box b-4">
-                                    <img src="images/i-6.jpg" alt="">
+                                    <img src="{{asset("images/i-6.jpg")}}" alt="">
                                 </div>
                             </a>
                         </div>
@@ -108,16 +108,16 @@
                     </form>
                     <div class="social_box">
                         <a href="">
-                            <img src="images/fb.png" alt="">
+                            <img src="{{asset("images/fb.png")}}" alt="">
                         </a>
                         <a href="">
-                            <img src="images/twitter.png" alt="">
+                            <img src="{{asset("images/twitter.png")}}" alt="">
                         </a>
                         <a href="">
-                            <img src="images/linkedin.png" alt="">
+                            <img src="{{asset("images/linkedin.png")}}" alt="">
                         </a>
                         <a href="">
-                            <img src="images/youtube.png" alt="">
+                            <img src="{{asset("images/youtube.png")}}" alt="">
                         </a>
                     </div>
                 </div>
