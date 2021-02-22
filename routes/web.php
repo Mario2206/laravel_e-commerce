@@ -22,3 +22,11 @@ Route::group(['prefix' => 'products'], function () {
     Route::get("{categorySlug}/{productId}", [\App\Http\Controllers\ProductController::class, "show"])->name('product-page');
 
 });
+
+Route::group(['prefix' => 'cart'], function() {
+
+    Route::post("", [\App\Http\Controllers\CartController::class, "store"])->name('cart-store');
+
+    Route::get("", [\App\Http\Controllers\CartController::class, "index"])->name('cart-index');
+
+});

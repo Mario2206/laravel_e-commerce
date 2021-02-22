@@ -34,7 +34,8 @@ class ProductController extends Controller
     {
         $category = Category::where('slug', $categorySlug)->firstOrFail();
         $product = Product::findOrFail($productId);
-        $annexProducts = Product::where('category_id', $category->id)->get();
+        $annexProducts = Product::where('category_id', $category->id)->where("id", "!=", $productId)->get();
+
         return view('pages/product/show', compact('product', 'annexProducts', 'category'));
     }
 }

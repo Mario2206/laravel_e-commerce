@@ -17,9 +17,18 @@
                 </p>
             </div>
             <div class="d-flex align-items-center justify-content-around">
-                <a href="" class="brand-btn m-0">
-                    Acheter
-                </a>
+                <form action="{{ route('cart-store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <button class="brand-btn m-0">
+                        Acheter
+                    </button>
+                    <select name="quantity" id="">
+                        @for($i = 1; $i <= ($product->stock >= 30 ? 30 : $product->stock); $i++)
+                            <option value="{{$i}}">{{$i}}</option>
+                        @endfor
+                    </select>
+                </form>
                 <p class="m-0">
                     Stock: <span class="font-weight-bold">{{ $product->stock }}</span>
                 </p>
@@ -28,7 +37,7 @@
         </div>
     </section>
     <section class="brand_section layout_padding"">
-        <h3 class="text-center">Quelques produits de la catégory <br><br><strong>{{$category->name}}</strong></h3>
+        <h3 class="text-center">Quelques produits de la catégorie <br><br><strong>{{$category->name}}</strong></h3>
         <div class="container">
             <div class="brand_container layout_padding2">
                 @foreach($annexProducts as $product)
