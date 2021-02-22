@@ -25,8 +25,12 @@ class AddUniqueSlugToCategoriesTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::table('categories', function (Blueprint $table) {
-            $table->dropUnique('slug');
+            $table->dropUnique(['slug']);
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 }

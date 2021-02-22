@@ -32,8 +32,9 @@ class ProductController extends Controller
 
     public function show(string $categorySlug, string $productId)
     {
+        $category = Category::where('slug', $categorySlug)->firstOrFail();
         $product = Product::findOrFail($productId);
-
-        return view('pages/product/show', compact('product'));
+        $annexProducts = Product::where('category_id', $category->id)->get();
+        return view('pages/product/show', compact('product', 'annexProducts', 'category'));
     }
 }
