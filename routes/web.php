@@ -25,8 +25,14 @@ Route::group(['prefix' => 'products'], function () {
 
 Route::group(['prefix' => 'cart'], function() {
 
-    Route::post("", [\App\Http\Controllers\CartController::class, "store"])->name('cart-store');
+    Route::post("/", [\App\Http\Controllers\CartController::class, "store"])->name('cart-store');
 
-    Route::get("", [\App\Http\Controllers\CartController::class, "index"])->name('cart-index');
+    Route::get("/", [\App\Http\Controllers\CartController::class, "index"])->name('cart-index');
+
+    Route::delete("{productId}", [\App\Http\Controllers\CartController::class, "destroy"])->name("cart-destroy");
+
+    Route::put("{productId}", [\App\Http\Controllers\CartController::class, "update"])->name("cart-update");
+
+
 
 });
