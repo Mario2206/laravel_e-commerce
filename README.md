@@ -4,7 +4,7 @@
 
 * Create .env file 
 * Copy / Paste content from .env.example to .env 
-* Run the followed commands :
+* Run the following commands :
 
 ```
     composer install
