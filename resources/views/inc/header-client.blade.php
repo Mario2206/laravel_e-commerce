@@ -16,16 +16,7 @@
                             <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Shop </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Furniture </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact us</a>
+                            <a class="nav-link" href="{{ route("cart-index") }}"> Voir panier</a>
                         </li>
                     </ul>
                     <div class="user_option">
