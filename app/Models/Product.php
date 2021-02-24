@@ -13,7 +13,7 @@ class Product extends Model
         "name",
         "price",
         "img_path",
-        "desccription",
+        "description",
         "stock",
         "category_id"
     ];

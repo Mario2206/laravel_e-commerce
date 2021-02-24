@@ -27,3 +27,4 @@ class ProductSeeder extends Seeder
         Product::factory($quantity)->create(['img_path' => $imgPath]);
     }
 }
+

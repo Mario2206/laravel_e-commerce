@@ -11,14 +11,12 @@
 ```
 
 ```
-    php artisan refresh
+    php artisan make:storage
 ```
 
-
 ```
-    php artisan db:seed
+    php artisan refresh --seed
 ```
-
 
 ```
     php artisan serve

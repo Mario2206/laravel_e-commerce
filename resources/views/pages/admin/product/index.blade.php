@@ -12,7 +12,7 @@
                     <form action="{{ route('products.index') }}" method="GET" class="d-flex flex-column align-items-center">
                         <select name="category" id="">
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}"{{ $currentCategory && $currentCategory == $category->id ? "selected" : null }}>{{ $category->name }}</option>
                             @endforeach
                         </select>
                         <button class="btn btn-primary my-2">Filtrer</button>

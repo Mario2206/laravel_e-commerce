@@ -58,7 +58,7 @@ class CategoryController extends Controller
         $imgPath = $this->fileUpload->upload("miniature",$request->input("name"));
 
         if(!$imgPath) {
-            return back()->withErrors($request->file('miniature')->getError(), $request->file('miniature')->getErrorMessage() );
+            return back()->withErrors(["customError" => "Error for uploading"]);
         }
 
         Category::create(["name" => $request->input("name"), "img_path" => $imgPath]);
