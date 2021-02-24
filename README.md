@@ -11,6 +11,10 @@
 ```
 
 ```
+    npm install && npm run dev
+```
+
+```
     php artisan make:storage
 ```
 
