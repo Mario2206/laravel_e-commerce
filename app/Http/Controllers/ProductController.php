@@ -27,7 +27,7 @@ class ProductController extends Controller
 
         $products = $productQuery->get();
 
-        return view('pages/product/index', compact("products", "category" ));
+        return view('pages/category/index', compact("products", "category" ));
     }
 
     public function show(string $categorySlug, string $productId)
@@ -36,6 +36,6 @@ class ProductController extends Controller
         $product = Product::findOrFail($productId);
         $annexProducts = Product::where('category_id', $category->id)->where("id", "!=", $productId)->get();
 
-        return view('pages/product/show', compact('product', 'annexProducts', 'category'));
+        return view('pages/category/show', compact('product', 'annexProducts', 'category'));
     }
 }

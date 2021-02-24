@@ -17,9 +17,9 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name("h
 
 Route::group(['prefix' => 'products'], function () {
 
-    Route::get("{categorySlug}", [\App\Http\Controllers\ProductController::class, "index"])->name('product-list');
+    Route::get("{categorySlug}", [\App\Http\Controllers\ProductController::class, "index"])->name('category-list');
 
-    Route::get("{categorySlug}/{productId}", [\App\Http\Controllers\ProductController::class, "show"])->name('product-page');
+    Route::get("{categorySlug}/{productId}", [\App\Http\Controllers\ProductController::class, "show"])->name('category-page');
 
 });
 
@@ -33,6 +33,12 @@ Route::group(['prefix' => 'cart'], function() {
 
     Route::put("{productId}", [\App\Http\Controllers\CartController::class, "update"])->name("cart-update");
 
+});
 
+Route::group(["prefix" => "admin"], function () {
+
+    Route::resource("categories", \App\Http\Controllers\Admin\CategoryController::class);
+
+    Route::resource("products", \App\Http\Controllers\Admin\ProductController::class);
 
 });

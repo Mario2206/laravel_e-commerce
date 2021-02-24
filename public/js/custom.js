@@ -6,7 +6,7 @@ function left_colunm_swetch () {
         localStorage.setItem('display', 'wrapper');
         $('#column-right:parent').each(function () {
         $(this).insertBefore($(this).prev('#column-left'));
-        });     
+        });
     }
     if ($(window).width() > 767) {
         localStorage.setItem('display', 'wrapper');
@@ -17,7 +17,7 @@ function left_colunm_swetch () {
 }
  /*  =====  magnificPopup  =====  */
  function m_popup_select () {
-    $('#product-thumbnail').magnificPopup({
+    $('#category-thumbnail').magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
@@ -36,7 +36,7 @@ function left_colunm_swetch () {
         return element.find('img');
       }
     }
-    
+
   })
 }
 /* ===== Search  =====   */
@@ -68,25 +68,25 @@ function gl_active(){
 function gl_view() {
     // Product List
     $('#list-view').on('click',function() {
-        $('.product-layout > .clearfix').remove();
-        $('.product-layout').attr('class', 'product-layout product-list col-xs-12');
-        $('#column-left .product-layout').attr('class', 'product-layout mb_20');
-        $('#column-right .product-layout').attr('class', 'product-layout mb_20');
+        $('.category-layout > .clearfix').remove();
+        $('.category-layout').attr('class', 'category-layout category-list col-xs-12');
+        $('#column-left .category-layout').attr('class', 'category-layout mb_20');
+        $('#column-right .category-layout').attr('class', 'category-layout mb_20');
 
     });
     // Product Grid
     $('#grid-view').on('click',function() {
-        $('.product-layout').attr('class', 'product-layout product-grid col-md-4 col-sm-6 col-xs-12');
+        $('.category-layout').attr('class', 'category-layout category-grid col-md-4 col-sm-6 col-xs-12');
     });
 }
 /* ===== Timer  =====   */
 function makeTimer() {
-    var endTime = new Date("August 10, 2018 12:00:00 PDT");         
+    var endTime = new Date("August 10, 2018 12:00:00 PDT");
     var endTime = (Date.parse(endTime)) / 1000;
     var now = new Date();
     var now = (Date.parse(now) / 1000);
     var timeLeft = endTime - now;
-    var days = Math.floor(timeLeft / 86400); 
+    var days = Math.floor(timeLeft / 86400);
     var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
     var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
     var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
@@ -98,7 +98,7 @@ function makeTimer() {
     $(".days").html(days + "<span>Days</span>");
     $(".hours").html(hours + "<span>Hours</span>");
     $(".minutes").html(minutes + "<span>Min</span>");
-    $(".seconds").html(seconds + "<span>Sec</span>");       
+    $(".seconds").html(seconds + "<span>Sec</span>");
 }
 setInterval(function() { makeTimer(); }, 1000);
 /* ===== Login Register Tab  =====   */
@@ -134,7 +134,7 @@ function footerToggle(){
         $(".footer-title").removeClass('active');
         $(".footer-title").removeClass('toggle');
         $(".footer .toggle_div").remove();
-    }   
+    }
 }
 
 function owl_carousel () {
@@ -301,7 +301,7 @@ function owl_carousel () {
     });
 
     /* ===== Product Thumbnail =====   */
-    $('#product-thumbnail').owlCarousel({
+    $('#category-thumbnail').owlCarousel({
         loop:false,
         thumbs: true,
         autoplay:false,
@@ -382,36 +382,36 @@ function owl_carousel () {
 
      $(window).scroll(function(){
     if ($(this).scrollTop() > 250) {
-        
+
         $('#scrollup').fadeIn(300);
-        } 
+        }
     else {
         $('#scrollup').fadeOut(300);
         }
-   }); 
+   });
         $('#scrollup').on('click',function(){
         $("html, body").animate({ scrollTop: 0 }, 1000);
         return false;
-    });  
+    });
 
 /* ===== Event for windows and document =====   */
 
-    $(document).ready(function(){     
+    $(document).ready(function(){
         gl_active();
         gl_view();
         search();
-        footerToggle(); 
+        footerToggle();
         m_popup_select ();
         log_reg_tab();
 
     });
-   
+
     $( window ).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
         owl_carousel ();
-        left_colunm_swetch ();      
+        left_colunm_swetch ();
     });
-   
+
     $( window ).resize(function() {
         left_colunm_swetch ();
         gl_active();
@@ -421,6 +421,6 @@ function owl_carousel () {
     });
 });
 jQuery( window ).on("load",function() {
-     $(".loder").fadeOut("slow");    
+     $(".loder").fadeOut("slow");
 });
 

@@ -23,3 +23,7 @@
 ```
     php artisan serve
 ```
+
+## Original repository
+
+https://github.com/Mario2206/laravel_e-commerce

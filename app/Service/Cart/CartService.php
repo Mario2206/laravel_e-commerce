@@ -11,7 +11,7 @@ class CartService {
 
 
     /**
-     * Store product in cart session
+     * Store category in cart session
      *
      * @param string $productId
      * @param int $incomingQuantity
@@ -48,7 +48,7 @@ class CartService {
     }
 
     /**
-     * Update one product from cart session (if quantity === 0, remove it)
+     * Update one category from cart session (if quantity === 0, remove it)
      * @param string $productId
      * @param int $incomingQuantity
      * @return CartItem[]

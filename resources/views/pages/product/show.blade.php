@@ -42,7 +42,7 @@
             <div class="brand_container layout_padding2">
                 @foreach($annexProducts as $product)
                     <div class="box">
-                        <a href="{{ route('product-page', ['categorySlug' => $category->slug, "productId" => $product->id]) }}">
+                        <a href="{{ route('category-page', ['categorySlug' => $category->slug, "productId" => $product->id]) }}">
                             <div class="img-box">
                                 <img src="{{asset('storage/' . $product->img_path)}}" alt="{{$product->name}} image">
                             </div>

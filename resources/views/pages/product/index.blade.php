@@ -10,16 +10,16 @@
                 <div class="d-flex flex-column align-items-center">
                     <h4>Trier</h4>
                     <div class="d-flex">
-                        <a href="{{ route('product-list', ['categorySlug' => $category->slug]) . "?orderby=price&type=desc"  }}" class="btn btn-primary mx-2">+ au - cher</a>
-                        <a href="{{ route('product-list', ['categorySlug' => $category->slug]) . "?orderby=price&type=asc"  }}" class="btn btn-primary mx-2">- au + cher</a>
+                        <a href="{{ route('category-list', ['categorySlug' => $category->slug]) . "?orderby=price&type=desc"  }}" class="btn btn-primary mx-2">+ au - cher</a>
+                        <a href="{{ route('category-list', ['categorySlug' => $category->slug]) . "?orderby=price&type=asc"  }}" class="btn btn-primary mx-2">- au + cher</a>
                     </div>
 
                 </div>
             </div>
             <div class="brand_container layout_padding2">
                 @foreach($products as $product)
-                    <div class="box">
-                        <a href="{{ route('product-page', ['categorySlug' => $category->slug, "productId" => $product->id]) }}">
+                    <article class="box">
+                        <a href="{{ route('category-page', ['categorySlug' => $category->slug, "productId" => $product->id]) }}">
                             <div class="img-box">
                                 <img src="{{asset('storage/' . $product->img_path)}}" alt="{{$product->name}} image">
                             </div>
@@ -32,7 +32,7 @@
                                 </h6>
                             </div>
                         </a>
-                    </div>
+                    </article>
                 @endforeach
             </div>
             <a href="" class="brand-btn">

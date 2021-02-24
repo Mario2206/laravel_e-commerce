@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         //clean storage
-        $fs->cleanDirectory('storage/app/public');
+        $fs->cleanDirectory('storage/app/images');
 
         //seeds
          User::factory(2)->admin()->create();
