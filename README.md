@@ -20,9 +20,9 @@
 ```
 
 ```
-    php artisan refresh --seed
+    php artisan migrate:refresh --seed
 ```
-
+ 
 ```
     php artisan serve
 ```
