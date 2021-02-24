@@ -35,10 +35,11 @@ Route::group(['prefix' => 'cart'], function() {
 
 });
 
-Route::group(["prefix" => "admin"], function () {
+Route::middleware(['auth:sanctum', 'verified'])->prefix("admin")->group( function () {
 
     Route::resource("categories", \App\Http\Controllers\Admin\CategoryController::class);
 
     Route::resource("products", \App\Http\Controllers\Admin\ProductController::class);
 
 });
+
