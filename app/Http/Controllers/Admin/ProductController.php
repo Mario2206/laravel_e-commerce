@@ -64,7 +64,7 @@ class ProductController extends Controller
             "category_id" => ["required"]
         ]);
 
-        ategory::findOrFail($request->input("category_id"));
+        Category::findOrFail($request->input("category_id"));
         $filename= $this->fileUpload->upload("miniature", $request->input("name"));
 
         if(!$filename) {

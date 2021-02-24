@@ -46,7 +46,8 @@
         @endforeach
         <footer class="footer_section border p-3 mt-3">
             <h3>Coût total : </h3>
-            <p>{{ $totalPrice }}$</p>
+            <p>{{ $totalPrice ?? "0" }}$</p>
         </footer>
+            <a href="#" class="btn brand-btn">Acheter</a>
     </section>
 @endsection
