@@ -2,8 +2,9 @@
 
 ## Start 
 
+* Create your database
 * Create .env file 
-* Copy / Paste content from .env.example to .env 
+* Copy / Paste content from .env.example to .env and enter your information
 * Run the following commands :
 
 ```
